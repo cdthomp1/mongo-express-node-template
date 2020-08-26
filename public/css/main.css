@@ -1,0 +1,66 @@
+html {
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  body {
+    margin: auto;
+    width: 100%;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    width: 85%;
+    margin: auto;
+  }
+
+  .navbar-container {
+    background-color: #26547c;
+    height: 80px;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    font-size: 45px;
+    margin: 16px;
+  }
+  
+  .brand {
+    margin-top: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: #58a4b0;
+  }
+  
+  .nav-items,
+  .login {
+    margin-top: 10px;
+  }
+  
+  
+  .navbar ul {
+    list-style: none;
+  }
+  
+  .navbar li {
+    display: inline;
+    font-size: 20px;
+    margin: 15px;
+  }
+
+  .main-content {
+      width: 85%;
+      margin: auto;
+  }
