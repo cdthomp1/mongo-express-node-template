@@ -28,9 +28,13 @@ This folder is used to seperate your API routes from your view routes. By requir
 ### Config
 Within the config folder there is a file called `keys.js`. Currently, the file is set up to export your MongoURI connection string. Add your connection string here to allow your application to communicate with your MongoDB instance. Other keys can be added here and accessed throught the program when needed. 
 ### Controllers
+The controllers are where your endpoints logic will be handled. For each object we will create a controller. For example, in a todo list app, we would create a todo item controller and a todo list controller. 
 ### Models
+Here is where we will define our objects for the application. This will use the mongoose library as we define our schema. Here is the link for the documentaion for [Mongoose](https://mongoosejs.com/docs/).
 ### Public
+We have two folders inside the public folder. Within this folder we have css and images. These folders are pretty self explanitory. 
 ### Routes
+
 ### Views
 ### Index.js
 
