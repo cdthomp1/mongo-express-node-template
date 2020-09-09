@@ -15,7 +15,7 @@ router
     .get(getToyCars)
     .post(addToyCar)
 
-route
+router
     .route('/toycars/:id')
     .get(getToyCarById)
     .delete(deleteToyCar)
