@@ -1,6 +1,6 @@
 # mongo-express-node-template
 ## Intro 
-This template is designed to help kick start Node.js applications that would use MongoDB as a database and Passport.js as an authentication middleware. Currently the application is set up to use ejs as the view engine, but can be adapted to use either React or Angular if needed by the end user. I have layed out the file structure below to help those that wish to use this template get started as quick as possible. 
+This template is designed to help kick start Node.js/Express.js applications that would use MongoDB as a database and Passport.js as an authentication middleware. Currently the application is set up to use ejs as the view engine, but can be adapted to use either React or Angular if needed by the end user. I have layed out the file structure below to help those that wish to use this template get started as quick as possible. 
 
 I personaly use this template and have listed the projects that use it at the end of this article. 
 
@@ -50,6 +50,6 @@ Here are some projects that I have worked on that have used this template:
 - Dev Connector (WIP)
     - Live Site (Comming Soon!)
     - [Code](https://github.com/cdthomp1/devconnector_2.0)
-    
+
 ## Final Notes 
 This is a constant work in progress. I am updating and clarifing this template weekly. If you have any feedback, please contact me at [my website](https://cameronthompson.io/contact). 
