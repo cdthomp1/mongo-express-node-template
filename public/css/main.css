@@ -133,8 +133,8 @@ body {
   justify-content: space-evenly;
 }
 
-.car-name {
-  width: 30%;
+.car-name, .car-color, .car-year {
+  width: 33%;
   text-align: left;
 }
 

@@ -2,7 +2,9 @@
   <div class="api-examples">
     <div class="carContainer">
       <div class="car-header">
-        <span>Name</span> <span>Color</span> <span>Year</span>
+        <h2 class="car-name">Name</h2>
+        <h2 class="car-color">Color</h2>
+        <h2 class="car-year">Year</h2>
       </div>
       <div class="carList">
 
@@ -51,6 +53,8 @@
     card.setAttribute("id", car._id)
 
     carname.setAttribute("class", "car-name");
+    carcolor.setAttribute("class", "car-color");
+    caryear.setAttribute("class", "car-year");
 
     carname.innerText = `${car.name}`;
     carcolor.innerText = `${car.color}`;
@@ -83,16 +87,11 @@
 
 
   function addToDatabase(carObj = generateCarObj()) {
-
-
-
-
-    console.log(carObj)
-
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "/api/v1/toycars", true);
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify(carObj));
     window.location.replace("/");
   }
+  
 </script>
