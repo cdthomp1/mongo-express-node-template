@@ -20,13 +20,13 @@ const db = require('./config/keys').MogoURI;
 
 // Connect to MongoDB
 if (db !== '[YOUR CONNECTION STRING HERE]') {
-    mongoose
-      .connect(
-        db,
-        { useNewUrlParser: true }
-      )
-      .then(() => console.log('MongoDB Connected'))
-      .catch(err => console.log(err));
+  mongoose
+    .connect(
+      db,
+      { useNewUrlParser: true }
+    )
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
 }
 
 // EJS
@@ -53,6 +53,8 @@ app.use(passport.session());
 // Routes
 app.use('/', require('./routes/index.js'));
 
+// Api Routes
+app.use('/api/v1', require('./api/api'));
 
 const PORT = process.env.PORT || 8000;
 
