@@ -1,25 +1,98 @@
 <div class="main-content">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam voluptate commodi doloribus omnis a asperiores? Animi cum atque, id iusto ad tempora, corporis consequuntur consequatur veritatis eum vero ipsum.</p>
+  <div class="api-examples">
+    <div class="carContainer">
+      <div class="car-header">
+        <span>Name</span> <span>Color</span> <span>Year</span>
+      </div>
+      <div class="carList">
+
+      </div>
+    </div>
+    <div class="add-car-container">
+      <label for="recNameInput">Car Name</label><br>
+      <input type="text" class="form-control" id="carName" placeholder="Car Name">
+      <label for="recNameInput">Car Color</label><br>
+      <input type="text" class="form-control" id="carColor" placeholder="Car Color">
+      <label for="recNameInput">Car Release Year</label><br>
+      <input type="date" class="form-control" id="carDate" placeholder="2020">
+      <button onclick="addToDatabase()">Add Car!</button>
+    </div>
+  </div>
 </div>
+
+<script>
+  function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var res = JSON.parse(this.responseText);
+        displayCars(res.data);
+      }
+    };
+    xhttp.open("GET", "/api/v1/toycars", true);
+    xhttp.send();
+  }
+
+  function displayCars(cars) {
+    cars.forEach(car => {
+      buildRecCard(car);
+    });
+  }
+
+  function buildRecCard(car) {
+    var container = document.getElementsByClassName("carList")[0];
+    var card = document.createElement("div");
+
+    var carname = document.createElement("div");
+    var carcolor = document.createElement("div");
+    var caryear = document.createElement("div");
+
+    card.setAttribute("class", "card");
+    card.setAttribute("id", car._id)
+
+    carname.setAttribute("class", "car-name");
+
+    carname.innerText = `${car.name}`;
+    carcolor.innerText = `${car.color}`;
+
+    var year = new Date(car.year)
+
+    caryear.innerText = ` ${year.getFullYear()}`;
+
+    card.appendChild(carname);
+    card.appendChild(carcolor);
+    card.appendChild(caryear);
+
+
+    container.appendChild(card);
+  }
+  loadDoc();
+
+
+  function generateCarObj() {
+
+    var year = new Date(document.getElementById("carDate").valueAsNumber);
+    console.log(year.toUTCString())
+    return carObj = {
+      name: document.getElementById("carName").value,
+      color: document.getElementById("carColor").value,
+      year: document.getElementById("carDate").valueAsNumber
+
+    }
+  }
+
+
+  function addToDatabase(carObj = generateCarObj()) {
+
+
+
+
+    console.log(carObj)
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "/api/v1/toycars", true);
+    xhttp.setRequestHeader('Content-type', 'application/json');
+    xhttp.send(JSON.stringify(carObj));
+    window.location.replace("/");
+  }
+</script>

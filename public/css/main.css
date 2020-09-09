@@ -7,7 +7,7 @@
 body {
   margin: auto;
   font-family: 'Varela Round', sans-serif;
-  background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-light));
+  background: var(--color-primary);
   height: 100%;
   color: white;
 }
@@ -97,6 +97,51 @@ body {
 .main-content {
   margin: auto;
   width: 65%;
+}
+
+.api-examples {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+.carContainer {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.carList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.car-name {
+  width: 30%;
+  text-align: left;
+}
+
+.docs {
+  margin: auto;
+
+  width: 50%;
 }
 
 @media screen and (min-width: 300px) and (max-width: 400px) {

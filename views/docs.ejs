@@ -1,0 +1,81 @@
+<div class="main-content">
+    <div class="docs">
+        <h2 id="intro">Intro</h2>
+        <p>This template is designed to help kick start Node.js applications that would use MongoDB as a database and
+            Passport.js as an authentication middleware. Currently the application is set up to use ejs as the view engine,
+            but can be adapted to use either React or Angular if needed by the end user. I have layed out the file structure
+            below to help those that wish to use this template get started as quick as possible. </p>
+        <p>I personaly use this template and have listed the projects that use it at the end of this article. </p>
+        <h2 id="hot-links">Hot Links</h2>
+        <ul>
+            <li><a href="#Getting-Started">Getting Started</a></li>
+            <li><a href="#File-Structure">File Structure</a>
+                <ul>
+                    <li><a href="#api">Api</a> </li>
+                    <li><a href="#config">Config</a></li>
+                    <li><a href="#controllers">Controllers</a></li>
+                    <li><a href="#models">Models</a></li>
+                    <li><a href="#public">Public</a></li>
+                    <li><a href="#routes">Routes</a></li>
+                    <li><a href="#views">Views</a></li>
+                    <li><a href="#index.js">Index.js</a></li>
+                </ul>
+            </li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#final-notes">Final Notes</a></li>
+        </ul>
+        <h2 id="getting-started">Getting Started</h2>
+        <p>Whether you cloned, forked, or downloaded this repository, the first thing you should do is to run <code>npm
+                install</code> to get the dependencies installed. After the dependencies are installed, you are ready to run
+            <code>npm run start</code> or <code>node index.js</code>. Both commands run the same script to get the
+            application started. The default port is set the <code>8000</code>. However, you are able to use a envirnment
+            variable to use a different port, more on that below. </p>
+        <h2 id="file-structure">File Structure</h2>
+        <h3 id="api">Api</h3>
+        <p>This folder is used to seperate your API routes from your view routes. By requiring your controller in this file,
+            you are able to define your API routes for your client to consume. </p>
+        <h3 id="config">Config</h3>
+        <p>Within the config folder there is a file called <code>keys.js</code>. Currently, the file is set up to export
+            your MongoURI connection string. Add your connection string here to allow your application to communicate with
+            your MongoDB instance. Other keys can be added here and accessed throught the program when needed. </p>
+        <h3 id="controllers">Controllers</h3>
+        <p>The controllers are where your endpoints logic will be handled. For each object we will create a controller. For
+            example, in a todo list app, we would create a todo item controller and a todo list controller. </p>
+        <h3 id="models">Models</h3>
+        <p>Here is where we will define our objects for the application. This will use the mongoose library as we define our
+            schema. Here is the link for the documentaion for <a href="https://mongoosejs.com/docs/">Mongoose</a>.</p>
+        <h3 id="public">Public</h3>
+        <p>We have two folders inside the public folder. Within this folder we have css and images. These folders are pretty
+            self explanitory. </p>
+        <h3 id="routes">Routes</h3>
+        <p>Routing in an our app is very important, especially if we want protected areas of our application! In the
+            <code>index.js</code> file is where routes can be added. For more information on routing see <a
+                href="https://expressjs.com/en/guide/routing.html">this</a> documentation. </p>
+        <h3 id="views">Views</h3>
+        <p>Currently this template is set up to use <code>ejs</code> as the view engine. There is the option to configure
+            this template to be a server for your React or Angular application. </p>
+        <h3 id="index-js">Index.js</h3>
+        <p>Here is where everything in the application is initialized and set up. There is line of code commented out that
+            can be uncommented if you want to use <a href="http://www.passportjs.org/">Passportjs</a> within your
+            application. It is important to keep this file small, so debuging can be done with little to no headache. </p>
+        <h2 id="projects">Projects</h2>
+        <p>Here are some projects that I have worked on that have used this template:</p>
+        <ul>
+            <li>Social Food (WIP)<ul>
+                    <li><a href="https://fathomless-wildwood-53985.herokuapp.com/">Live Site</a> </li>
+                    <li><a href="https://github.com/cdthomp1/social-food">Code</a></li>
+                </ul>
+            </li>
+            <li>Dev Connector (WIP)<ul>
+                    <li>Live Site (Comming Soon!)</li>
+                    <li><a href="https://github.com/cdthomp1/devconnector_2.0">Code</a>
+                       
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2 id="final-notes">Final Notes</h2>
+        This is a constant work in progress. I am updating and clarifing this template weekly. If you have
+        any feedback, please contact me at <a href="https://cameronthompson.io/contact">my website</a>.
+    </div>
+</div>

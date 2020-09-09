@@ -50,5 +50,6 @@ Here are some projects that I have worked on that have used this template:
 - Dev Connector (WIP)
     - Live Site (Comming Soon!)
     - [Code](https://github.com/cdthomp1/devconnector_2.0)
+    
 ## Final Notes 
 This is a constant work in progress. I am updating and clarifing this template weekly. If you have any feedback, please contact me at [my website](https://cameronthompson.io/contact). 
