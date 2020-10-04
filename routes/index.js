@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const fs = require('fs');
-
 
 // Welcome Page
 router.get('/', (req, res) => res.render('index'));
-router.get('/docs', (req, res) => res.render('docs'));
+
+// Docs Welcome Page
+router.get('/docs', (req, res) => res.render('./docs/index'))
 
 module.exports = router;

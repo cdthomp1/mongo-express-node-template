@@ -2,9 +2,12 @@
 node_modules
 npm-debug.log
 
+
 # Local development
 *.env
 *.dev
 .DS_Store
 
-
+# Files
+config/keys.js
+Mongo Express Node Template.postman_collection.json
