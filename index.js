@@ -18,6 +18,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // DB Config
 const db = require('./config/keys').MogoURI;
 
+// Db Connection from .env file
+// const db = process.env.MONGO_URI;
+
 // Connect to MongoDB
 if (db !== '[YOUR CONNECTION STRING HERE]') {
     mongoose

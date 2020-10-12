@@ -7,8 +7,8 @@
 body {
   margin: auto;
   font-family: 'Varela Round', sans-serif;
-  background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-light));
-  height: 100%;
+  background: linear-gradient(to bottom right, var(--color-primary), var(--color-primary-light)) no-repeat center center fixed;
+  background-size: cover;
   color: white;
 }
 
@@ -54,8 +54,16 @@ body {
 .bar__nav-togle {
   cursor: pointer;
 }
+.bar__side-nav-togle {
+  cursor: pointer;
+}
 
 .bar__nav-togle>i {
+  color: white;
+  font-size: 2em;
+}
+
+.bar__side-nav-togle>i {
   color: white;
   font-size: 2em;
 }
@@ -64,7 +72,15 @@ body {
   display: none;
 }
 
+#inpSideNavToggle {
+  display: none;
+}
+
 #inpNavToggle:checked~.nav {
+  display: flex;
+}
+
+#inpSideNavToggle:checked~.nav-side {
   display: flex;
 }
 
@@ -72,7 +88,7 @@ body {
   display: none;
   flex-direction: column;
   position: fixed;
-  top: var(--bar-height);
+  top: calc(2 * var(--bar-height ));
   left: 0;
   width: 100%;
   height: calc(100vh - var(--bar-height));
@@ -97,6 +113,23 @@ body {
 .main-content {
   margin: auto;
   width: 65%;
+}
+
+.doc-container {
+  display: flex;
+  flex-direction: row;
+}
+.nav-side {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: var(--bar-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--bar-height));
+  padding: 32px;
+  background: #222222;
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 300px) and (max-width: 400px) {
@@ -137,6 +170,9 @@ body {
     text-align: center;
     padding-left: 20px;
   }
+  .side-nav {
+    width: 25%;
+  }
 }
 
 @media screen and (min-width: 780px) {
@@ -146,6 +182,10 @@ body {
     margin: auto;
     text-align: center;
     padding-left: 20px;
+  }
+
+  .side-nav {
+    width: 25%;
   }
 
 }
