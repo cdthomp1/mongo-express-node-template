@@ -18,6 +18,7 @@
     "homepage": "https://github.com/cdthomp1/mongo-express-node-template#readme",
     "dependencies": {
         "bcryptjs": "^2.4.3",
+        "dotenv": "^8.2.0",
         "ejs": "^3.1.5",
         "express": "^4.17.1",
         "express-ejs-layouts": "^2.5.0",
