@@ -9,6 +9,7 @@ I personaly use this template and have listed the projects that use it at the en
 - [File Structure](#File-Structure)
     - [Api](#api)    
     - [Config](#config)
+    - [.env](#.env)
     - [Controllers](#controllers)
     - [Models](#models)
     - [Public](#public)
@@ -19,14 +20,23 @@ I personaly use this template and have listed the projects that use it at the en
 - [Final Notes](#final-notes)
 
 ## Getting Started
-Whether you cloned, forked, or downloaded this repository, the first thing you should do is to run `npm install` to get the dependencies installed. After the dependencies are installed, you are ready to run `npm run start` or `node index.js`. Both commands run the same script to get the application started. The default port is set the `8000`. However, you are able to use a envirnment variable to use a different port, more on that below.  
+Whether you cloned, forked, or downloaded this repository, the first thing you should do is to run `npm install` to get the dependencies installed. After the dependencies are installed, you are ready to run `npm run start` or `node index.js`. Both commands run the same script to get the application started. The default port is set the `8000`. However, you are able to use a environment variable to use a different port, more on that below.  
 
 ## File Structure 
 
 ### Api
 This folder is used to seperate your API routes from your view routes. By requiring your controller in this file, you are able to define your API routes for your client to consume. 
 ### Config
-Within the config folder there is a file called `keys.js`. Currently, the file is set up to export your MongoURI connection string. Add your connection string here to allow your application to communicate with your MongoDB instance. Other keys can be added here and accessed throught the program when needed. 
+Within the config folder there is a file called `keys.js`. Currently, the file is set up to export your MongoURI connection string. Add your connection string here to allow your application to communicate with your MongoDB instance. Other keys can be added here and accessed throughout the program when needed. 
+### .env
+An additional way to hold your keys and secrets for your application is to take advantage of the [dotenv dependency](https://www.npmjs.com/package/dotenv). Your keys and secrets will be stored in a `.env` file in like this example: 
+```
+MONGO_URI = MONGO.CONNECTION.STRING.EXAMPLE
+API_KEY = API-KEY-EXAMPLE-FOR-FUN1
+```
+These items are accessed from the `.env` file in this way: `process.env.API_KEY`. Refer to the about package documentation link for more information. 
+
+**Be Sure to add your `.env` to your `.gitignore` file so your keys don't get pushed to your Github.** 
 ### Controllers
 The controllers are where your endpoints logic will be handled. For each object we will create a controller. For example, in a todo list app, we would create a todo item controller and a todo list controller. 
 ### Models
