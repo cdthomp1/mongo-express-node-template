@@ -1,3 +1,3 @@
 module.exports = {
-    MogoURI: '[YOUR CONNECTION STRING HERE]'
+    MongoURI: '[YOUR CONNECTION STRING HERE]'
 }
