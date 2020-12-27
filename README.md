@@ -2,7 +2,7 @@
 ## Intro 
 This template is designed to help kick start Node.js applications that use Express.js, MongoDB, and Passport.js. Currently the application is set up to use ejs as the view engine, but can be adapted to use either React or Angular if needed by the end user. I have layed out the file structure below to help those that wish to use this template get started as quick as possible. 
 
-I personaly use this template and have listed the projects that use it at the end of this article. 
+I personally use this template and have listed the projects that use it at the end of this article. 
 
 ## Hot Links 
 - [Getting Started](#Getting-Started)
@@ -25,7 +25,7 @@ Whether you cloned, forked, or downloaded this repository, the first thing you s
 ## File Structure 
 
 ### Api
-This folder is used to seperate your API routes from your view routes. By requiring your controller in this file, you are able to define your API routes for your client to consume. 
+This folder is used to separate your API routes from your view routes. By requiring your controller in this file, you are able to define your API routes for your client to consume. 
 ### Config
 Within the config folder there is a file called `keys.js`. Currently, the file is set up to export your MongoURI connection string. Add your connection string here to allow your application to communicate with your MongoDB instance. Other keys can be added here and accessed throughout the program when needed. 
 ### .env
