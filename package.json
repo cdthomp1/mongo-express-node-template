@@ -1,10 +1,11 @@
 {
     "name": "mongo-express-node-template",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A template to quick start either MERN or MEAN apps",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
     },
     "repository": {
         "type": "git",
