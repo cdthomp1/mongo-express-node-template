@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // require('./config/passport')(passport);
 
 // DB Config
-const db = require('./config/keys').MogoURI;
+const db = require('./config/keys').MongoURI;
 
 // Db Connection from .env file
 // const db = process.env.MONGO_URI;
