@@ -23,7 +23,6 @@ I personally use this template and have listed the projects that use it at the e
 Whether you cloned, forked, or downloaded this repository, the first thing you should do is to run `npm install` to get the dependencies installed. After the dependencies are installed, you are ready to run `npm run start` or `node index.js`. Both commands run the same script to get the application started. The default port is set the `8000`. However, you are able to use a environment variable to use a different port, more on that below.  
 
 ## File Structure 
-
 ### Api
 This folder is used to separate your API routes from your view routes. By requiring your controller in this file, you are able to define your API routes for your client to consume. 
 ### Config
@@ -40,9 +39,9 @@ These items are accessed from the `.env` file in this way: `process.env.API_KEY`
 ### Controllers
 The controllers are where your endpoints logic will be handled. For each object we will create a controller. For example, in a todo list app, we would create a todo item controller and a todo list controller. 
 ### Models
-Here is where we will define our objects for the application. This will use the mongoose library as we define our schema. Here is the link for the documentaion for [Mongoose](https://mongoosejs.com/docs/).
+Here is where we will define our objects for the application. This will use the mongoose library as we define our schema. Here is the link for the documentation for [Mongoose](https://mongoosejs.com/docs/).
 ### Public
-We have two folders inside the public folder. Within this folder we have css and images. These folders are pretty self explanitory. 
+We have two folders inside the public folder. Within this folder we have css and images. These folders are pretty self explanatory. 
 ### Routes
 Routing in an our app is very important, especially if we want protected areas of our application! In the `index.js` file is where routes can be added. For more information on routing see [this](https://expressjs.com/en/guide/routing.html) documentation. 
 
@@ -50,7 +49,7 @@ Routing in an our app is very important, especially if we want protected areas o
 Currently this template is set up to use `ejs` as the view engine. There is the option to configure this template to be a server for your React or Angular application. 
 
 ### Index.js
-Here is where everything in the application is initialized and set up. There is line of code commented out that can be uncommented if you want to use [Passportjs](http://www.passportjs.org/) within your application. It is important to keep this file small, so debuging can be done with little to no headache. 
+Here is where everything in the application is initialized and set up. There is line of code commented out that can be uncommented if you want to use [Passportjs](http://www.passportjs.org/) within your application. It is important to keep this file small, so debugging can be done with little to no headache. 
 
 ## Projects 
 Here are some projects that I have worked on that have used this template:
@@ -58,7 +57,7 @@ Here are some projects that I have worked on that have used this template:
     - [Live Site](https://fathomless-wildwood-53985.herokuapp.com/) 
     - [Code](https://github.com/cdthomp1/social-food)
 - Dev Connector (WIP)
-    - Live Site (Comming Soon!)
+    - Live Site (Coming Soon!)
     - [Code](https://github.com/cdthomp1/devconnector_2.0)
 ## Final Notes 
-This is a constant work in progress. I am updating and clarifing this template weekly. If you have any feedback, please contact me at [my website](https://cameronthompson.io/contact). 
+This is a constant work in progress. I am updating and clarifying this template weekly. If you have any feedback, please contact me at [my website](https://cameronthompson.io/contact). 
