@@ -1,13 +1,66 @@
-# Node build artifacts
-node_modules
-npm-debug.log
 
+# NPM #
+##########
+# Ignore all directories called node_modules in current folder and any subfolders.
 
-# Local development
+**node_modules/
 
-*.dev
-.DS_Store
+# Logs and databases #
+######################
+*.log
+*.sql
 
-# Files
-config/keys.js
-Mongo Express Node Template.postman_collection.json
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map
+
+# Composer #
+##########
+!assets/js/vendor/
+wpcs/
+/vendor/
+
+# Bower #
+##########
+assets/bower_components/*
+
+# Codekit #
+##########
+/codekit-config.json
+*.codekit
+**.codekit-cache/*
+
+# Compiled Files and Build Dirs #
+##########
+/README.html
+
+# PhpStrom Project Files #
+.idea/
+library/vendors/composer
+assets/img/.DS_Store
+
+# Visual Studio Project Files #
+.vs/
+.vscode/
+
+# No lock files.
+yarn.lock
+settings.dat
+
+# next.js
+/.next/
+/out/
