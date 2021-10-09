@@ -1,7 +1,7 @@
 {
   "name": "create-mern-app",
   "version": "1.0.0",
-  "description": "A CLI tool to intialize mern stack starter code in a jiffy",
+  "description": "A CLI tool to generate mern stack starter code in a jiffy",
   "bin": {
     "create-mern-app": "./index.js"
   },
@@ -9,7 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Cameron Thompson and Meer Hamza"
+  },
   "license": "MIT",
   "keywords": [
     "cli",
@@ -23,6 +25,8 @@
     "chalk": "^4.1.2",
     "cli-welcome": "^2.2.2",
     "inquirer": "^8.2.0",
-    "ora": "^6.0.1"
+    "ncp": "^2.0.0",
+    "node-async-exec": "^1.2.0",
+    "ora": "^4.1.1"
   }
 }

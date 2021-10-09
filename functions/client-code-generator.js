@@ -11,6 +11,7 @@ module.exports = async () => {
         })
         spinner.succeed('created react app')
     } catch (err) {
-        return spinner.fail('unable to create a react app')
+        spinner.fail('unable to create a react app')
+        throw err;
     }
 }

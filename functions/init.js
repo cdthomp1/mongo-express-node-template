@@ -14,7 +14,8 @@ module.exports = async (projectName) => {
 
     }
     catch (err) {
-        return spinner.fail(`fail to create ${projectName}`);
+        spinner.fail(`fail to create ${projectName}`);
+        throw err;
     }
 }
 
@@ -27,6 +28,7 @@ const gitInitializer = async (projectName) => {
         })
         spinner.succeed('initialized empty git repository')
     } catch (err) {
-        return spinner.fail(`fail to initialized git`);
+        spinner.fail(`fail to initialized git`);
+        throw err;
     }
 }
