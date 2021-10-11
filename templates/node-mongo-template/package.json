@@ -1,0 +1,31 @@
+{
+    "name": "mongo-express-node-template",
+    "version": "1.0.1",
+    "description": "A template to quick start either MERN or MEAN apps",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cdthomp1/mongo-express-node-template.git"
+    },
+    "author": "Cameron Thompson",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cdthomp1/mongo-express-node-template/issues"
+    },
+    "homepage": "https://github.com/cdthomp1/mongo-express-node-template#readme",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "express-session": "^1.17.1",
+        "mongoose": "^5.11.8",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0"
+    }
+}

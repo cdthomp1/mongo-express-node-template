@@ -1,0 +1,13 @@
+# Node build artifacts
+node_modules
+npm-debug.log
+
+
+# Local development
+
+*.dev
+.DS_Store
+
+# Files
+config/keys.js
+Mongo Express Node Template.postman_collection.json
